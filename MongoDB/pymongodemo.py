@@ -7,6 +7,8 @@ cluster = MongoClient("mongodb+srv://admin:admin123@cluster0.ogibm.mongodb.net/?
 db = cluster["sldb"]
 collection = db["employee"]
 
-post = {"name": "Changappa", "email":"chang@abcd.com"}
+post1 = {"name": "Changappa", "email":"chang@abcd.com"}
+post2 = {"name": "Changappa2", "email":"chang2@abcd.com"}
 
-collection.insert_one(post)
+
+collection.insert_many([post1, post2])
